@@ -71,7 +71,7 @@ def listTvShows(channel):
 		except:
 			desc = 'No Description'
 		try:
-			picture = show['Image']['ImageRepresentations']['ImageRepresentation'][0]['url']
+			picture = clean_picture_url(show['Image']['ImageRepresentations']['ImageRepresentation'][0]['url'])
 		except:
 			picture = ''
 		addShow(title, show['id'], mode, desc, picture,page,channel)
@@ -107,7 +107,7 @@ def listVideosByMode(channel,mode,page):
 		except:
 			desc = 'No Description'
 		try:
-			picture = video['Image']['ImageRepresentations']['ImageRepresentation'][0]['url']
+			picture = clean_picture_url(video['Image']['ImageRepresentations']['ImageRepresentation'][0]['url'])
 		except:
 			picture = ''
 		try:
@@ -143,7 +143,7 @@ def listLiveStreams(channel):
 		except:
 			title = 'No Title'
 		try:
-			picture = video['AssetSet']['Rubric']['PrimaryChannel']['Image']['ImageRepresentations']['ImageRepresentation'][0]['url']
+			picture = clean_picture_url(video['AssetSet']['Rubric']['PrimaryChannel']['Image']['ImageRepresentations']['ImageRepresentation'][0]['url'])
 		except:
 			picture = ''	
 		addLink(title, video['id'], 'playepisode', desc, picture, length, pubdate,showbackground,channel)
@@ -177,7 +177,7 @@ def listEpisodes(channel,showid,showbackground,page):
 		except:
 			desc = 'No Description'
 		try:
-			picture = episode['Assets']['Video'][0]['Image']['ImageRepresentations']['ImageRepresentation'][0]['url']
+			picture = clean_picture_url(episode['Assets']['Video'][0]['Image']['ImageRepresentations']['ImageRepresentation'][0]['url'])
 		except:
 			# no picture
 			picture = ''
@@ -338,6 +338,9 @@ def open_srf_url(urlstring):
         dialog = xbmcgui.Dialog().ok('xStream Error',str(e.__class__.__name__),str(e))
 	
     return response
+
+def clean_picture_url(urlstring):
+    return re.sub('/16x9$','',urlstring)
 
 #'Start'
 #'What to do... if nothing is given we start with the index'
