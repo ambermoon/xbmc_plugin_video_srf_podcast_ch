@@ -1,4 +1,4 @@
-![SRF Replay](icon.png)
+![SRF Replay](resources/icon.png)
 
 # Unofficial SRF Replay
 
@@ -8,6 +8,6 @@ This add-on has been migrated from [SRF Podcast Plugin](https://kodi.wiki/view/A
 ## Add-on description
 **This add-on is deprecated and will just be kept alive in its current state as long as the current used API is working. No new features will be added. A new version of this add-on "Unofficial SRG SSR Replay" has been launched that supports all the current features and some more. Information can be found under ["Unofficial SRG SSR Replay" Kodi Add-on Page](https://kodi.tv/addons/matrix/plugin.video.srgssr_ch_replay) or on ["Unofficial SRG SSR Replay" Github](https://github.com/ManBehindMooN/kodi_plugin_video_srgssr_ch_replay)**
 
-The add-on has been renamed to "Unofficial SRF Replay". It only supports the SRF channel and the only feature is to list and play all TV shows. All other channels and features from the original add-on have been refactored out. You might ask yourself 'Why?'. Well, never put avocado on a burger! Simple is always best!
+The add-on has been renamed to "Unofficial SRF Replay". It only supports the SRF channel and the only feature is to list and play this TV show library. All other channels and features from the original add-on have been refactored out. You might ask yourself 'Why?'. Well, never put avocado on a burger! Simple is always best!
 
 All other usage information can be found on the [README on github](https://github.com/ManBehindMooN/kodi_plugin_video_srf_ch_replay)
